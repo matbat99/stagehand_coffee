@@ -126,3 +126,16 @@ Migrating to CreateTheatres (20190711155335)
   ↳ bin/rails:9
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
+Started GET "/" for ::1 at 2019-07-13 17:40:57 +0200
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/matthewmacbookpro/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.4ms)
+  Rendered shared/_navbar.html.erb (4.1ms)
+  Rendered shared/_flashes.html.erb (0.3ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/matthewmacbookpro/code/matbat99/stagehand_coffee/public/packs
+Completed 200 OK in 4966ms (Views: 4964.7ms | ActiveRecord: 0.0ms)
+
+
