@@ -281,3 +281,49 @@ Completed 200 OK in 17ms (Views: 14.8ms | ActiveRecord: 0.2ms)
   ↳ db/seeds.rb:13
   [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users"[0m
   ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3606862861387952460)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddCoordinatesToTheatres (20190718192039)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (10.1ms)[0m  [1m[35mALTER TABLE "theatres" ADD "latitude" float[0m
+  ↳ db/migrate/20190718192039_add_coordinates_to_theatres.rb:3
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "theatres" ADD "longitude" float[0m
+  ↳ db/migrate/20190718192039_add_coordinates_to_theatres.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190718192039"]]
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddCoordinatesToCoffeess (20190718192055)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3606862861387952460)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3606862861387952460)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddCoordinatesToCoffees (20190718192055)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "coffees" ADD "latitude" float[0m
+  ↳ db/migrate/20190718192055_add_coordinates_to_coffees.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "coffees" ADD "longitude" float[0m
+  ↳ db/migrate/20190718192055_add_coordinates_to_coffees.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190718192055"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(3606862861387952460)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTheatre Create (0.7ms)[0m  [1m[32mINSERT INTO "theatres" ("name", "address", "created_at", "updated_at", "latitude", "longitude") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "pantages"], ["address", "6233 Hollywood Blvd, Los Angeles, CA 90028"], ["created_at", "2019-07-18 19:25:48.440044"], ["updated_at", "2019-07-18 19:25:48.440044"], ["latitude", 34.1017119473684], ["longitude", -118.325481210526]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
