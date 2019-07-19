@@ -7,4 +7,8 @@ class Theatre < ApplicationRecord
   def self.how_many
     return self.all.count
   end
+
+  def local_joe
+    Coffee.near(self.address, 1)
+  end
 end
